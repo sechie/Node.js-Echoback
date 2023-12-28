@@ -4,7 +4,7 @@ var client = new net.Socket();
 client.setEncoding('utf8');
 
 client.connect('3000', 'localhost', () => {
-    console.log('connected');
+    console.log('connected_client');
 });
 
 client.on('data', data => {
@@ -13,5 +13,5 @@ client.on('data', data => {
 });
 
 client.on('close', () => {
-    console.log('closed');
+    console.log('closed_client');
 });
